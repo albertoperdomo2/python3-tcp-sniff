@@ -18,7 +18,6 @@ The class `gatherTCP` has one public method `run()` which creates the queue for 
 The `_sniff_data` private method is in charge of sniffing the data from the packets. In order to do so, a raw socket is used to receive the packages; then, the packets are parsed and evaluated to only use TCP packets.
 
 The `_http_client` private method is in charge of waiting for 5 minutes before sending the information present in the queue to the main monitoring server using a POST request. 
-**TODO**: I know the way in which the process sleeps is not the most elegant solution, and I'm aware that I should have started asynchronous processes and use some method from the `asyncio` library.
 
 Additionally, a simple function called `get_args_parser` is presented to handle the two flags that the script supports:
 * `--url`: To determine the monitoring server URL.
@@ -46,3 +45,5 @@ python3 logging_http_server.py
 
 Every 5 minutes, a new request will be sent to the dummy server with the sniffed data.
 
+## TODO
+I know the way in which the process sleeps is not the most elegant solution, and I'm aware that I should have started asynchronous processes and use some method from the `asyncio` library.
