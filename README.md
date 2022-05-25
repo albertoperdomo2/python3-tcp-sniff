@@ -1,7 +1,7 @@
 # TCP/IP Packets Sniff
-This weekend project tries to solve the following problem: Imagine that you have a set of machines, in which security is crucial, and you want to know what TPC/IP traffic goes into and out of this machine. You hace a central monitoring server, to which HTTP DATA packets should be sent to be monitored. 
+This weekend project tries to solve the following problem: Imagine that you have a set of machines, in which security is crucial, and you want to know what TPC/IP traffic goes into and out of this machine. You have a central monitoring server, to which HTTP DATA packets should be sent to be monitored. 
 
-The presented solution is composed by the following parts:
+The proposed solution is composed by the following parts:
 * `src/gather.py`: The script that aims to solve the monitoring problem.
 * `src/logging_http.py`: A dummy HTTP server to log the requests.
 * `Dockerfile`: The Dockerfile to run the solution inside of a container. 
