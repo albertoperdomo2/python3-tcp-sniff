@@ -1,5 +1,5 @@
 # TCP/IP Packets Sniff
-This weekend project tries to solve the following problem: Imagine that you have a set of machines, in which security is crucial, and you want to know what TPC/IP traffic goes into and out of this machine. You have a central monitoring server, to which HTTP DATA packets should be sent to be monitored. 
+This weekend project tries to solve the following problem: Imagine that you have a set of machines, in which security is crucial, and you want to know what TPC/IP traffic goes in and out of this machine. You have a central monitoring server, to which HTTP data packets should be sent to be monitored. 
 
 The proposed solution is composed by the following parts:
 * `src/gather.py`: The script that aims to solve the monitoring problem.
@@ -12,7 +12,7 @@ docker run -it -d --network host gather
 * `requirements.txt`: The requirements for the Python environment.
 
 ## Development
-For the proposed solution, a class `gatherTCP` was created, which creates a gatherer object for the TCP/IP packets. The only argument that the class accepts is the URL of the endpoint in which the sniffed data will be posted, i.e. the referred as monitoring server. 
+For the proposed solution, a class `gatherTCP` was created, which creates a gatherer object for the TCP/IP packets. The only argument that the class accepts is the URL of the endpoint in which the sniffed data will be POSTed, i.e. the referred as monitoring server. 
 The class `gatherTCP` has one public method `run()` which creates the queue for the data objects, and both the sniff_data and http_client processes. 
 
 The `_sniff_data` private method is in charge of sniffing the data from the packets. In order to do so, a raw socket is used to receive the packages; then, the packets are parsed and evaluated to only use TCP packets.
